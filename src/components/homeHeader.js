@@ -6,7 +6,6 @@ class HomeHeader extends Component {
     render() {
         return (
             <div className="container headerContainer">
-                <div className="headerBackground"></div>
                 <div className="headerText">
                     <ul className="logBar">
                         <li><Link className="logBarButton" to='/logowanie'>Zaloguj</Link></li>

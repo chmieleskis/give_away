@@ -49,6 +49,7 @@
           line-height: 2.4rem;
           padding: 1rem 0;
           outline: none;
+          background: transparent;
           &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: $color-placeholder;
           }
@@ -74,6 +75,7 @@
           border: none;
           border-bottom: 1px solid #707070;
           padding: 1rem 0;
+          background: transparent;
           &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: $color-placeholder;
           }

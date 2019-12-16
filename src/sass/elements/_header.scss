@@ -1,15 +1,11 @@
 .headerContainer {
   height: 88.5rem;
+  width: 100vw;
+  background-image: url("../../assets/Hero Image.png");
+  background-position: -400px;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
-  .headerBackground {
-    height: 100%;
-    width: 100%;
-    background-image: url("../../assets/Hero Image.png");
-    background-size: inherit;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: -470px;
-  }
   .headerText {
     height: 100%;
     width: 50%;
@@ -21,7 +17,7 @@
     .logBar {
       justify-content: flex-end;
       display: flex;
-      margin-right: 12.5rem;
+      margin-right: 10rem;
       .logBarButton{
         color: $color-font;
         font-size: 1.4rem;
@@ -35,9 +31,9 @@
       }
     }
     .navBar {
+      width: 100%;
       display: flex;
       align-self: flex-end;
-      margin-right: 12.5rem;
       .navBarButton {
         color: $color-font;
         font-size: 1.8rem;
