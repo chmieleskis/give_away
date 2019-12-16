@@ -1,0 +1,117 @@
+.contact {
+  width: 100%;
+  height: 102.6rem;
+  background-image: url("../../assets/Background Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .contact2{
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFFC9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .contactBox {
+      width: 25%;
+      margin-top: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 65%;
+      h3 {
+        @include headerH3
+      }
+      .decoration {
+        @include decoration
+      }
+      form {
+        .label {
+          display: block;
+          font-size: 1.6rem;
+          font-weight: 600;
+          line-height: 8.5rem;
+        }
+        .nameLabel, .emailLabel {
+          display: inline-block;
+          width: 49%;
+        }
+        .nameLabel {
+          margin-right: 2%;
+        }
+        input {
+          width: 49%;
+          border: none;
+          border-bottom: 1px solid #707070;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          padding: 1rem 0;
+          outline: none;
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $color-placeholder;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: $color-placeholder;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: $color-placeholder;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: $color-placeholder;
+          }
+        }
+        .nameInput {
+          margin-right: 2%;
+        }
+        textarea {
+          width: 100%;
+          outline: none;
+          resize: none;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          border: none;
+          border-bottom: 1px solid #707070;
+          padding: 1rem 0;
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $color-placeholder;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: $color-placeholder;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: $color-placeholder;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: $color-placeholder;
+          }
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      height: 5%;
+      width: 100%;
+      position: absolute;
+      top: 93%;
+      left: 0;
+      .copyrights {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        position: absolute;
+        left: 47%;
+      }
+      .icons {
+        color: black;
+        font-size: 3rem;
+        position: absolute;
+        left: 93%;
+        .fa-facebook-square {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+}

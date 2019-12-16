@@ -1,0 +1,26 @@
+@mixin button {
+  font-size: 3.6rem;
+  font-weight: 300;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #3C3C3C;
+  padding: 1.3rem 0;
+  width: 31rem;
+  border: 0.75px solid #3C3C3C;
+}
+
+@mixin headerH3 {
+  font-size: 3.8rem;
+  line-height: 5.5rem;
+}
+
+@mixin decoration {
+  width: 30rem;
+  height: 5rem;
+  margin-top: 2.5rem;
+  background-image: url("../../assets/Decoration.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

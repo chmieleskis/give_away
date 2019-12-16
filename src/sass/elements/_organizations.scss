@@ -1,0 +1,13 @@
+.organizations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    margin-top: 7rem;
+    @include headerH3;
+  }
+  .decoration {
+    @include decoration;
+  }
+}

@@ -1,0 +1,77 @@
+.fourSteps {
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    @include headerH3;
+  }
+  .decoration {
+    @include decoration
+  }
+}
+
+.fourColumns {
+  background-color: $color-background-grey;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 32.5rem;
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 10%;
+    margin: 0 3%;
+    .icon {
+      width: 8.5rem;
+      height: 8.5rem;
+    }
+    .iconOne {
+      background-image: url("../../assets/Icon.png");
+    }
+    .iconTwo {
+      background-image: url("../../assets/Icon1.png");
+    }
+    .iconThree {
+      background-image: url("../../assets/Icon2.png");
+    }
+    .iconFour {
+      background-image: url("../../assets/Icon3.png");
+    }
+    h6 {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      position: relative;
+      padding: 2rem 0 1rem 0;
+      width: 100%;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 30%;
+        bottom: 0;
+        width: 8rem;
+        border-bottom: 1px solid rgba(60, 60, 60, .5);
+      }
+    }
+    p {
+      padding-top: 1rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.buttonContainer {
+  height: 22rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .buttonGiveAway {
+    @include button
+    margin-bottom: 2rem;
+  }
+}

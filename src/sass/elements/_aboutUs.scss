@@ -1,0 +1,42 @@
+.aboutUs {
+  height: 100vh;
+  display: flex;
+  .aboutUsText {
+    height: 100%;
+    width: 51%;
+    background-color: $color-background-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .aboutUsHeader {
+      @include headerH3
+    }
+    .decoration {
+      @include decoration
+    }
+    p {
+      padding-top: 2rem;
+      width: 66rem;
+      font-size: 3rem;
+      line-height: 5.5rem;
+      text-align: center;
+    }
+    .signature {
+      height: 15rem;
+      width: 21rem;
+      background-image: url("../../assets/Signature.svg");
+      background-repeat: no-repeat;
+      align-self: flex-end;
+      margin: 2rem 15rem 0 0;
+    }
+  }
+  .aboutUsPhoto {
+    height: 100%;
+    width: 49%;
+    background-image: url("../../assets/People.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -5rem 0;
+  }
+}

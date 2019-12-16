@@ -1,0 +1,81 @@
+.headerContainer {
+  height: 88.5rem;
+  position: relative;
+  .headerBackground {
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/Hero Image.png");
+    background-size: inherit;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -470px;
+  }
+  .headerText {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    .logBar {
+      justify-content: flex-end;
+      display: flex;
+      margin-right: 12.5rem;
+      .logBarButton{
+        color: $color-font;
+        font-size: 1.4rem;
+        line-height: 8.5rem;
+        text-decoration: none;
+        padding: 1rem 2.5rem;
+        border: 0.75px solid transparent;
+        &:hover {
+          border: 0.75px solid #FAD648;
+        }
+      }
+    }
+    .navBar {
+      display: flex;
+      align-self: flex-end;
+      margin-right: 12.5rem;
+      .navBarButton {
+        color: $color-font;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        text-decoration: none;
+        padding: 1rem 2.5rem;
+        border: 0.75px solid transparent;
+        cursor: pointer;
+        &:hover {
+          border: 0.75px solid $color-font;
+        }
+      }
+    }
+    .textBar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 75rem;
+      margin-top: 21rem;
+      h3 {
+        @include headerH3;
+        text-align: center;
+      }
+
+      .decoration {
+        @include decoration;
+      }
+
+      .buttonBar {
+        margin-top: 4rem;
+        display: flex;
+        .button {
+          @include button;
+        }
+        .buttonGiveAway {
+          margin-right: 4.4rem;
+        }
+      }
+    }
+  }
+}
