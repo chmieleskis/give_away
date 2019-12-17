@@ -41,13 +41,13 @@
         .nameLabel {
           margin-right: 2%;
         }
-        input {
+        .input {
           width: 49%;
           border: none;
-          border-bottom: 1px solid #707070;
+          border-bottom: 1px solid $color-contact-form-details;
           font-size: 1.8rem;
           line-height: 2.4rem;
-          padding: 1rem 0;
+          padding-bottom: 1rem;
           outline: none;
           background: transparent;
           &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -73,7 +73,7 @@
           font-size: 1.8rem;
           line-height: 2.4rem;
           border: none;
-          border-bottom: 1px solid #707070;
+          border-bottom: 1px solid $color-contact-form-details;
           padding: 1rem 0;
           background: transparent;
           &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -88,6 +88,18 @@
           &:-moz-placeholder { /* Firefox 18- */
             color: $color-placeholder;
           }
+        }
+        .submit {
+          outline: none;
+          cursor: pointer;
+          margin-top: 4rem;
+          padding: 1.3rem 5.2rem;
+          float: right;
+          background-color: transparent;
+          border: 0.75px solid $color-contact-form-details;
+          font-size: 1.8rem;
+          line-height: 3.2rem;
+          font-weight: 300;
         }
       }
     }

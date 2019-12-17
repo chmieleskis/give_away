@@ -1,0 +1,18 @@
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 12.5rem;
+  .navBarButton {
+    color: $color-font;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border: 0.75px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 0.75px solid $color-font;
+    }
+  }
+}

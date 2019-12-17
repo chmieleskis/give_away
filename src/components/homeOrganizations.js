@@ -5,7 +5,7 @@ class Organizations extends Component {
         return (
             <div className="organizations" id='organizations'>
                 <h3>Komu pomagamy?</h3>
-                <span className="decoration"></span>
+                <span className="decoration"/>
             </div>
         )
     }

@@ -5,14 +5,32 @@
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  color: #3C3C3C;
+  color: $color-font;
   padding: 1.3rem 0;
   width: 31rem;
-  border: 0.75px solid #3C3C3C;
+  border: 0.75px solid $color-font;
+}
+
+@mixin smallButton {
+  display: inline-block;
+  width: 12rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 0.75px solid transparent;
+  color: $color-font;
+  font-size: 1.8rem;
+  line-height: 5rem;
+  text-decoration: none;
+  text-align: center;
 }
 
 @mixin headerH3 {
   font-size: 3.8rem;
+  line-height: 5.5rem;
+}
+
+@mixin headerH2 {
+  font-size: 4rem;
   line-height: 5.5rem;
 }
 
