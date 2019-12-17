@@ -3,24 +3,26 @@ import LogBar from "./logBar";
 import NavBar from "./navBar";
 import {Link} from "react-router-dom";
 
-class LogIn extends Component {
+class Registration extends Component {
     render() {
         return (
-            <div className="logInContainer">
+            <div className="registrationContainer">
                 <LogBar/>
                 <NavBar/>
                 <div className="logInBar">
-                    <h2>Zaloguj się</h2>
+                    <h2>Załóż konto</h2>
                     <span className="decoration"></span>
                     <div className="logInInputs">
                         <label className="label">Email</label>
                         <input className='input' type="email"/>
                         <label className="label">Hasło</label>
                         <input className='input' type="password"/>
+                        <label className="label">Powtórz hasło</label>
+                        <input className='input' type="password"/>
                     </div>
                     <div className="logInButtons">
-                        <Link className="button" to='/rejestracja'>Załóż konto</Link>
-                        <button className="button">Zaloguj się</button>
+                        <button className="button">Załóż konto</button>
+                        <Link className="button" to='/logowanie'>Zaloguj się</Link>
                     </div>
                 </div>
             </div>
@@ -28,4 +30,4 @@ class LogIn extends Component {
     }
 }
 
-export default LogIn;
+export default Registration;
