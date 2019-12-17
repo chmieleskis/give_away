@@ -1,0 +1,30 @@
+.logOutContainer {
+  height: 100vh;
+  width: 100vw;
+  .logInBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      margin-top: 12.5%;
+      @include headerH2;
+    }
+
+    .decoration {
+      @include decoration;
+      margin-top: 2rem;
+    }
+
+    .button {
+      margin-top: 4rem;
+      padding: 0 2rem;
+      @include smallButton;
+      width: auto;
+      &:hover {
+        border: 0.75px solid $color-font;
+      }
+    }
+  }
+}
