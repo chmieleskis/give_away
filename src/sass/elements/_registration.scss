@@ -43,6 +43,12 @@
           margin-bottom: 4rem;
         }
       }
+      .error {
+        @include error;
+        &:last-child {
+          margin-bottom: 4rem;
+        }
+      }
     }
     .logInButtons {
       margin-top: 4rem;

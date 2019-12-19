@@ -10,6 +10,11 @@
   width: 31rem;
   border: 0.75px solid $color-font;
   cursor: pointer;
+  &:active {
+    -webkit-box-shadow: inset -3px -3px 5px 0px rgba(189, 189, 189, 1);
+    -moz-box-shadow: inset -3px -3px 5px 0px rgba(189, 189, 189, 1);
+    box-shadow: inset -3px -3px 5px 0px rgba(189, 189, 189, 1);
+  }
 }
 
 @mixin error {
@@ -33,6 +38,14 @@
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  &:active {
+    -webkit-box-shadow: inset -3px -3px 5px 0px rgba(189,189,189,1);
+    -moz-box-shadow: inset -3px -3px 5px 0px rgba(189,189,189,1);
+    box-shadow: inset -3px -3px 5px 0px rgba(189,189,189,1);
+  }
+  &:hover {
+    border: 0.75px solid $color-font;
+  }
 }
 
 @mixin headerH3 {

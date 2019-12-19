@@ -8,10 +8,10 @@ const initialState = {
     password: '',
     emailError: '',
     passwordError: ''
-}
+};
 
 class LogIn extends Component {
-    state = initialState
+    state = initialState;
 
     handleChange = e => {
         this.setState( {[e.target.name]: e.target.value});
@@ -24,10 +24,10 @@ class LogIn extends Component {
         let emailError = '';
         let passwordError = '';
 
-        if (!this.state.email.includes('@')) {
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
             emailError = 'Podany adres email jest nieprawidłowy!'
         }
-        if (this.state.password.length < 7) {
+        if (this.state.password.length < 6) {
             passwordError = 'Hasło jest za krótkie!'
         }
         if (emailError || passwordError) {
@@ -35,9 +35,7 @@ class LogIn extends Component {
                 emailError, passwordError
             });
             return false
-        };
-
-
+        }
         return true
     };
 
