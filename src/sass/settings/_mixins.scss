@@ -9,6 +9,14 @@
   padding: 1.3rem 0;
   width: 31rem;
   border: 0.75px solid $color-font;
+  cursor: pointer;
+}
+
+@mixin error {
+  color: red;
+  align-self: flex-start;
+  margin: 1rem 7rem;
+  font-size: 1.2rem;
 }
 
 @mixin smallButton {
@@ -24,6 +32,7 @@
   line-height: 5rem;
   text-decoration: none;
   text-align: center;
+  cursor: pointer;
 }
 
 @mixin headerH3 {
