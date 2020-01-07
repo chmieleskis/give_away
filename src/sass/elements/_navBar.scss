@@ -10,7 +10,11 @@
     padding: 1rem 2.5rem;
     border: 0.75px solid transparent;
     cursor: pointer;
-
+    &:active {
+      -webkit-box-shadow: inset -1.5px -1.5px 5px 0px #bdbdbd;
+      -moz-box-shadow: inset -1.5px -1.5px 5px 0px #bdbdbd;
+      box-shadow: inset -1.5px -1.5px 5px 0px #bdbdbd;
+    }
     &:hover {
       border: 0.75px solid $color-font;
     }

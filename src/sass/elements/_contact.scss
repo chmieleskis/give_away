@@ -42,6 +42,7 @@
           margin-right: 2%;
         }
         .input {
+          background-color: transparent;
           width: 49%;
           border: none;
           border-bottom: 1px solid $color-contact-form-details;
@@ -49,7 +50,7 @@
           line-height: 2.4rem;
           padding-bottom: 1rem;
           outline: none;
-          background: transparent;
+          margin-bottom: 1rem;
           &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             color: $color-placeholder;
           }
@@ -65,6 +66,19 @@
         }
         .nameInput {
           margin-right: 2%;
+        }
+        .error {
+          @include error;
+          margin: 0;
+          width: 49%;
+          min-height: 1%;
+        }
+        .error-two {
+          margin-left: 2%;
+        }
+        .error-three {
+          margin-top: 1rem;
+          width: 100%;
         }
         textarea {
           width: 100%;
@@ -90,15 +104,10 @@
           }
         }
         .submit {
-          outline: none;
-          cursor: pointer;
+          @include smallButton;
           margin-top: 4rem;
-          padding: 1.3rem 5.2rem;
           float: right;
-          background-color: transparent;
           border: 0.75px solid $color-contact-form-details;
-          font-size: 1.8rem;
-          line-height: 3.2rem;
           font-weight: 300;
         }
       }

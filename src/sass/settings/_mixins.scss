@@ -11,13 +11,14 @@
   border: 0.75px solid $color-font;
   cursor: pointer;
   &:active {
-    -webkit-box-shadow: inset -3px -3px 5px 0px rgba(189, 189, 189, 1);
-    -moz-box-shadow: inset -3px -3px 5px 0px rgba(189, 189, 189, 1);
-    box-shadow: inset -3px -3px 5px 0px rgba(189, 189, 189, 1);
+    -webkit-box-shadow: inset -3px -3px 5px 0px #bdbdbd;
+    -moz-box-shadow: inset -3px -3px 5px 0px #bdbdbd;
+    box-shadow: inset -3px -3px 5px 0px #bdbdbd;
   }
 }
 
 @mixin error {
+  display: inline-block;
   color: red;
   align-self: flex-start;
   margin: 1rem 7rem;
@@ -39,9 +40,9 @@
   text-align: center;
   cursor: pointer;
   &:active {
-    -webkit-box-shadow: inset -3px -3px 5px 0px rgba(189,189,189,1);
-    -moz-box-shadow: inset -3px -3px 5px 0px rgba(189,189,189,1);
-    box-shadow: inset -3px -3px 5px 0px rgba(189,189,189,1);
+    -webkit-box-shadow: inset -3px -3px 5px 0px #bdbdbd;
+    -moz-box-shadow: inset -3px -3px 5px 0px #bdbdbd;
+    box-shadow: inset -3px -3px 5px 0px #bdbdbd;
   }
   &:hover {
     border: 0.75px solid $color-font;
