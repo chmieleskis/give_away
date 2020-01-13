@@ -9,6 +9,8 @@ const initialState = {
     messageError: ''
 };
 
+console.log(initialState)
+
 class Contact extends Component {
     state = initialState;
 
@@ -21,7 +23,7 @@ class Contact extends Component {
         let emailError = '';
         let messageError = '';
 
-        if (!/^\w+([\.-]?\w+)+$/.test(this.state.name)) {
+        if (!/^\w+$/.test(this.state.name)) {
             nameError = 'Podane imię jest nieprawidłowe!'
         }
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
@@ -45,6 +47,7 @@ class Contact extends Component {
         if (isValid) {
             this.setState(initialState)
         }
+        console.log(this.state)
     };
 
     render() {
@@ -72,7 +75,7 @@ class Contact extends Component {
                                        value={this.state.email}
                                        onChange={this.handleChange}
                                 />
-                                {this.state.nameError ? (<span className="error">{this.state.nameError}</span>) : null}
+                                {this.state.nameError ? (<span className="error">{this.state.nameError}</span>) : <span className="error"/>}
                                 {this.state.emailError ? (<span className="error error-two">{this.state.emailError}</span>) : null}
                                 <label className='label'>Wpisz swoją wiadomość</label>
                                 <textarea id="message"
@@ -95,8 +98,8 @@ class Contact extends Component {
                         <div className="footer">
                             <p className="copyrights">Copyright by Coders Lab</p>
                             <div className="icons">
-                                <i className="fab fa-facebook-square"/>
-                                <i className="fab fa-instagram"/>
+                                <a href="#"><i className="fab fa-facebook-square"/></a>
+                                <a href=""><i className="fab fa-instagram"/></a>
                             </div>
                         </div>
                     </div>

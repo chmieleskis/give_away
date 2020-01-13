@@ -1,0 +1,56 @@
+.descriptionPagination {
+  @include description
+}
+
+.names {
+  width: 70%;
+  .organisationDescription {
+    height: 8rem;
+    width: 100%;
+    font-family: $font-alt;
+    border-bottom: 1px solid $color-contact-form-details;
+    display: flex;
+    &:last-child {
+      border-bottom: none;
+    };
+    div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:first-of-type {
+        width: 65%;
+        margin-right: 10%;
+      };
+      &:last-of-type {
+        width: 25%;
+        text-align: right;
+      };
+      .organisationName {
+        font-size: 2.6rem;
+        font-weight: 300;
+        line-height: 3.1rem;
+      }
+      .organisationMission {
+        font-size: 1.8rem;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 2.1rem;
+        margin-top: .6rem;
+      }
+      .organisationNeeds {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 2.2rem;
+      }
+    }
+  };
+}
+.pageNumber {
+  li {
+  @include organisationsPages
+  }
+  .active {
+    border: 1px solid $color-contact-form-details;
+  }
+}
+
