@@ -19,7 +19,6 @@ class LogIn extends Component {
         // console.log(this.state.password)
     };
 
-
     validate = () => {
         let emailError = '';
         let passwordError = '';

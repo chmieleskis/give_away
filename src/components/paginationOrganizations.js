@@ -3,12 +3,36 @@ import React, {Component} from "react";
 class PaginationOrganizations extends Component {
     state = {
         organizationsNames: [
-            'Organizacja "Lorem Ipsum 1"',
-            'Organizacja "Lorem Ipsum 2"',
-            'Organizacja "Lorem Ipsum 3"',
-            'Organizacja "Lorem Ipsum 4"',
-            'Organizacja "Lorem Ipsum 5"',
-            'Organizacja "Lorem Ipsum 6"',
+            {
+                name: 'Organizacja "Lorem Ipsum 1"',
+                mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nam.',
+                needs: 'lorem, ipsum, dolor, sit, amet'
+            },
+            {
+                name: 'Organizacja "Lorem Ipsum 2"',
+                mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                needs: 'consectetur, adipisicing, elit'
+            },
+            {
+                name: 'Organizacja "Lorem Ipsum 3"',
+                mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo!',
+                needs: 'blanditiis, deserunt, dolore, ducimus, eligendi, esse, facilis'
+            },
+            {
+                name: 'Organizacja "Lorem Ipsum 4"',
+                mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, mollitia rem?',
+                needs: 'hic, nemo, numquam, optio, rerum, veritatis, vitae'
+            },
+            {
+                name: 'Organizacja "Lorem Ipsum 5"',
+                mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
+                needs: 'assumenda, molestiae, velit'
+            },
+            {
+                name: 'Organizacja "Lorem Ipsum 6"',
+                mission: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                needs: 'dolor, harum, obcaecati, pariatur, repellat'
+            }
         ],
         currentPage: 1,
         namesPerPage: 3
@@ -31,11 +55,11 @@ class PaginationOrganizations extends Component {
         const elements = currentNames.map((organizationName, i) => {
             return <li key={i} className='organisationDescription'>
                 <div>
-                    <p className="organisationName">{organizationName}</p>
-                    <p className="organisationMission">Cel i misja:</p>
+                    <p className="organisationName">{organizationName.name}</p>
+                    <p className="organisationMission">Cel i misja: {organizationName.mission}</p>
                 </div>
                 <div>
-                    <p className="organisationNeeds">Lorem ipsum dolor sit amet.</p>
+                    <p className="organisationNeeds">{organizationName.needs}</p>
                 </div>
             </li>
         });
@@ -50,9 +74,7 @@ class PaginationOrganizations extends Component {
         if (this.state.organizationsNames.length/this.state.namesPerPage > 1) {
             return (
                 <>
-                    <p className="descriptionPagination">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation.</p>
+                    <p className="descriptionPagination">Cholera jasna! Won mi tu stąd, jeden z drugim! Będzie mi tu kłaki rozrzucał! Panie! Tu nie jest salon damsko-męski! Tu jest kiosk RUCH-u! Ja... Ja tu mięso mam!</p>
                     <ul className='names'>
                         {elements}
                     </ul>
@@ -64,9 +86,7 @@ class PaginationOrganizations extends Component {
         } else {
             return (
                 <>
-                    <p className="descriptionPagination">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation.</p>
+                    <p className="descriptionPagination">Cholera jasna! Won mi tu stąd, jeden z drugim! Będzie mi tu kłaki rozrzucał! Panie! Tu nie jest salon damsko-męski! Tu jest kiosk RUCH-u! Ja... Ja tu mięso mam!</p>
                     <ul className='names'>
                         {elements}
                     </ul>

@@ -9,10 +9,29 @@ const initialState = {
     messageError: ''
 };
 
-console.log(initialState)
-
 class Contact extends Component {
     state = initialState;
+
+//do Fetch metoda
+    //     fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(state)
+    //     }).then(r => {
+    //         if (r.ok === true) {
+    //             return r.json();
+    //         } else {
+    //             throw new Error('Brak sieci')
+    //         }
+    //     }).then(data => {
+    //         // console.log(data)
+    //     }).catch(err => {
+    //         console.log(err)
+    //     })
+
+
 
     handleChange = e => {
         this.setState( {[e.target.name]: e.target.value})
@@ -65,7 +84,7 @@ class Contact extends Component {
                                        type="text"
                                        placeholder='Stanisław'
                                        name='name'
-                                       value={this.state.value}
+                                       value={this.state.name}
                                        onChange={this.handleChange}
                                 />
                                 <input className='input'
@@ -99,7 +118,7 @@ class Contact extends Component {
                             <p className="copyrights">Copyright by Coders Lab</p>
                             <div className="icons">
                                 <a href="#"><i className="fab fa-facebook-square"/></a>
-                                <a href=""><i className="fab fa-instagram"/></a>
+                                <a href="#"><i className="fab fa-instagram"/></a>
                             </div>
                         </div>
                     </div>

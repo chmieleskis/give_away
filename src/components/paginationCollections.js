@@ -3,15 +3,21 @@ import React, {Component} from "react";
 class PaginationCollections extends Component {
     state = {
         collectionsNames: [
-            'Zbiórka "Lorem Ipsum 1"',
-            'Zbiórka "Lorem Ipsum 2"',
-            'Zbiórka "Lorem Ipsum 3"',
+            {
+                name: 'Zbiórka "Alternatywy 4"',
+                mission: 'Idź do tej kuchty od profesora i powiedz jej, że ja w tych warunkach nie mogę pracować.',
+                needs: 'niech konik polny, niech wiat swawolny...'
+            },            {
+                name: 'Zbiórka "Co mi zrobisz, jak mnie złapiesz?"',
+                mission: 'Podejrzenia panów są całkowicie bezpodstawne.',
+                needs: 'kurdupel?, kurdupel?'
+            },            {
+                name: 'Zbiórka "Brunet wieczorową porą"',
+                mission: 'Kolega tak nieszczęśliwie schodził po schodach, że wbił sobie nóż w plecy.',
+                needs: 'Należy się 50 złotych.'
+            },
         ],
-        collectionsMissions: [
-            'Misja 1',
-            'Misja 2',
-            'Misja 3'
-        ],
+
         currentPage: 1,
         namesPerPage: 3
     };
@@ -33,11 +39,11 @@ class PaginationCollections extends Component {
         const elements = currentNames.map((collectionName, collectionMission, i) => {
             return <li className='organisationDescription'>
                 <div>
-                    <p className="organisationName" key={i}>{collectionName}</p>
-                    <p className="organisationMission" key={i}>Cel i misja: {collectionMission}</p>
+                    <p className="organisationName" key={i}>{collectionName.name}</p>
+                    <p className="organisationMission" key={i}>Cel i misja: {collectionName.mission}</p>
                 </div>
                 <div>
-                    <p className="organisationNeeds">Lorem ipsum dolor sit amet.</p>
+                    <p className="organisationNeeds">{collectionName.needs}</p>
                 </div>
             </li>
         });
@@ -52,7 +58,7 @@ class PaginationCollections extends Component {
         if (this.state.collectionsNames.length/this.state.namesPerPage > 1) {
             return (
                 <>
-                    <p className="descriptionPagination">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <p className="descriptionPagination">Ja rozumiem, że wam jest zimno, ale jak jest zima to musi być zimno! Tak? Pani kierowniczko, takie jest odwieczne prawo natury! </p>
                     <ul className='names'>
                         {elements}
                     </ul>
@@ -64,7 +70,7 @@ class PaginationCollections extends Component {
         } else {
             return (
                 <>
-                    <p className="descriptionPagination">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <p className="descriptionPagination">Ja rozumiem, że wam jest zimno, ale jak jest zima to musi być zimno! Tak? Pani kierowniczko, takie jest odwieczne prawo natury! </p>
                     <ul className='names'>
                         {elements}
                     </ul>
