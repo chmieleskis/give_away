@@ -12,27 +12,6 @@ const initialState = {
 class Contact extends Component {
     state = initialState;
 
-//do Fetch metoda
-    //     fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(state)
-    //     }).then(r => {
-    //         if (r.ok === true) {
-    //             return r.json();
-    //         } else {
-    //             throw new Error('Brak sieci')
-    //         }
-    //     }).then(data => {
-    //         // console.log(data)
-    //     }).catch(err => {
-    //         console.log(err)
-    //     })
-
-
-
     handleChange = e => {
         this.setState( {[e.target.name]: e.target.value})
     };
@@ -42,7 +21,7 @@ class Contact extends Component {
         let emailError = '';
         let messageError = '';
 
-        if (!/^\w+$/.test(this.state.name)) {
+        if (!/^\w\p{L}+$/u.test(this.state.name)) {
             nameError = 'Podane imię jest nieprawidłowe!'
         }
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email)) {
@@ -60,13 +39,42 @@ class Contact extends Component {
         return true
     };
 
+
     handleSubmit = e => {
         e.preventDefault();
         const isValid = this.validate();
+
+        const data = {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+        };
+
+        function sendEmail() {
+            fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(r => {
+                if (r.ok === true) {
+                    return r.json();
+                } else {
+                    throw new Error('Błąd')
+                }
+            }).then(data => {
+                console.log(data)
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+
+        sendEmail();
+
         if (isValid) {
             this.setState(initialState)
         }
-        console.log(this.state)
     };
 
     render() {
