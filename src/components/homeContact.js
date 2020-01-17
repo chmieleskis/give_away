@@ -1,16 +1,15 @@
 import React, {Component} from "react";
 
-const initialState = {
-    name: '',
-    email: '',
-    message: '',
-    nameError: '',
-    emailError: '',
-    messageError: ''
-};
-
 class Contact extends Component {
-    state = initialState;
+    state = {
+        name: '',
+        email: '',
+        message: '',
+        nameError: '',
+        emailError: '',
+        messageError: '',
+        emailSend: false
+    };
 
     handleChange = e => {
         this.setState( {[e.target.name]: e.target.value})
@@ -73,66 +72,138 @@ class Contact extends Component {
         sendEmail();
 
         if (isValid) {
-            this.setState(initialState)
+            this.setState({
+                name: '',
+                email: '',
+                message: '',
+                nameError: '',
+                emailError: '',
+                messageError: '',
+            })
         }
     };
 
     render() {
-        return (
-            <>
-                <div className="contact" id='contact'>
-                    <div className="contact2">
-                        <div className="contactBox">
-                            <h3>Skontaktuj się z nami</h3>
-                            <span className="decoration"/>
-                            <form>
-                                <label className="label nameLabel" >Wpisz swoje imię</label>
-                                <label className="label emailLabel" >Wpisz swój email</label>
-                                <input className='input nameInput'
-                                       type="text"
-                                       placeholder='Stanisław'
-                                       name='name'
-                                       value={this.state.name}
-                                       onChange={this.handleChange}
-                                />
-                                <input className='input'
-                                       type="email"
-                                       placeholder='abc@xyz.pl'
-                                       name='email'
-                                       value={this.state.email}
-                                       onChange={this.handleChange}
-                                />
-                                {this.state.nameError ? (<span className="error">{this.state.nameError}</span>) : <span className="error"/>}
-                                {this.state.emailError ? (<span className="error error-two">{this.state.emailError}</span>) : null}
-                                <label className='label'>Wpisz swoją wiadomość</label>
-                                <textarea id="message"
-                                          cols="50"
-                                          rows="4"
-                                          placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                          incididunt ut labore et dolore magna aliqua.'
-                                          name='message'
-                                          value={this.state.message}
-                                          onChange={this.handleChange}
-                                />
-                                {this.state.messageError ? (<span className="error error-three">{this.state.messageError}</span>) : null}
-                                <input className='submit'
-                                       type="submit"
-                                       value='Wyślij'
-                                       onClick={this.handleSubmit}
-                                />
-                            </form>
-                        </div>
-                        <div className="footer">
-                            <p className="copyrights">Copyright by Coders Lab</p>
-                            <div className="icons">
-                                <a href="#"><i className="fab fa-facebook-square"/></a>
-                                <a href="#"><i className="fab fa-instagram"/></a>
+        if (this.state.emailSend === true) {
+            return (
+                <>
+                    <div className="contact" id='contact'>
+                        <div className="contact2">
+                            <div className="contactBox">
+                                <h3>Skontaktuj się z nami</h3>
+                                <span className="decoration"/>
+                                <span className='succesMessage'>Wiadomość zostałą wysłana!<br/>Wkrótce się skontaktujemy.</span>
+                                <form>
+                                    <label className="label nameLabel">Wpisz swoje imię</label>
+                                    <label className="label emailLabel">Wpisz swój email</label>
+                                    <input className='input nameInput'
+                                           type="text"
+                                           placeholder='Stanisław'
+                                           name='name'
+                                           value={this.state.name}
+                                           onChange={this.handleChange}
+                                    />
+                                    <input className='input'
+                                           type="email"
+                                           placeholder='abc@xyz.pl'
+                                           name='email'
+                                           value={this.state.email}
+                                           onChange={this.handleChange}
+                                    />
+                                    {this.state.nameError ? (<span className="error">{this.state.nameError}</span>) :
+                                        <span className="error"/>}
+                                    {this.state.emailError ? (
+                                        <span className="error error-two">{this.state.emailError}</span>) : null}
+                                    <label className='label'>Wpisz swoją wiadomość</label>
+                                    <textarea id="message"
+                                              cols="50"
+                                              rows="4"
+                                              placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                              incididunt ut labore et dolore magna aliqua.'
+                                              name='message'
+                                              value={this.state.message}
+                                              onChange={this.handleChange}
+                                    />
+                                    {this.state.messageError ? (
+                                        <span className="error error-three">{this.state.messageError}</span>) : null}
+                                    <input className='submit'
+                                           type="submit"
+                                           value='Wyślij'
+                                           onClick={this.handleSubmit}
+                                    />
+                                </form>
+                            </div>
+                            <div className="footer">
+                                <p className="copyrights">Copyright by Coders Lab</p>
+                                <div className="icons">
+                                    <a href="#"><i className="fab fa-facebook-square"/></a>
+                                    <a href="#"><i className="fab fa-instagram"/></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </>
-        )
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <div className="contact" id='contact'>
+                        <div className="contact2">
+                            <div className="contactBox">
+                                <h3>Skontaktuj się z nami</h3>
+                                <span className="decoration"/>
+                                <form>
+                                    <label className="label nameLabel">Wpisz swoje imię</label>
+                                    <label className="label emailLabel">Wpisz swój email</label>
+                                    <input className='input nameInput'
+                                           type="text"
+                                           placeholder='Stanisław'
+                                           name='name'
+                                           value={this.state.name}
+                                           onChange={this.handleChange}
+                                    />
+                                    <input className='input'
+                                           type="email"
+                                           placeholder='abc@xyz.pl'
+                                           name='email'
+                                           value={this.state.email}
+                                           onChange={this.handleChange}
+                                    />
+                                    {this.state.nameError ? (<span className="error">{this.state.nameError}</span>) :
+                                        <span className="error"/>}
+                                    {this.state.emailError ? (
+                                        <span className="error error-two">{this.state.emailError}</span>) : null}
+                                    <label className='label'>Wpisz swoją wiadomość</label>
+                                    <textarea id="message"
+                                              cols="50"
+                                              rows="4"
+                                              placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                              incididunt ut labore et dolore magna aliqua.'
+                                              name='message'
+                                              value={this.state.message}
+                                              onChange={this.handleChange}
+                                    />
+                                    {this.state.messageError ? (
+                                        <span className="error error-three">{this.state.messageError}</span>) : null}
+                                    <input className='submit'
+                                           type="submit"
+                                           value='Wyślij'
+                                           onClick={this.handleSubmit}
+                                    />
+                                </form>
+                            </div>
+                            <div className="footer">
+                                <p className="copyrights">Copyright by Coders Lab</p>
+                                <div className="icons">
+                                    <a href="#"><i className="fab fa-facebook-square"/></a>
+                                    <a href="#"><i className="fab fa-instagram"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )
+        }
     };
 }
 
