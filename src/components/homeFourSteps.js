@@ -11,22 +11,22 @@ class HomeFourSteps extends Component {
                 </div>
                 <div className="container fourColumns">
                     <div className="column">
-                        <span className="icon iconOne"/>
+                        <span className="icon iconShirt"/>
                         <h6>Wybierz rzeczy</h6>
                         <p>ubrania, zabawki, sprzęt i inne</p>
                     </div>
                     <div className="column">
-                        <span className="icon iconTwo"/>
+                        <span className="icon iconBag"/>
                         <h6>Spakuj je</h6>
                         <p>skorzystaj z worków na śmieci</p>
                     </div>
                     <div className="column">
-                        <span className="icon iconThree"/>
+                        <span className="icon iconLoupe"/>
                         <h6>Zdecyduj komu chcesz pomóc</h6>
                         <p>wybierz zaufane miejsce</p>
                     </div>
                     <div className="column">
-                        <span className="icon iconFour"/>
+                        <span className="icon iconArrows"/>
                         <h6>Zamów kuriera</h6>
                         <p>kurier przyjedzie w dogodnym terminie</p>
                     </div>

@@ -49,7 +49,6 @@ class Contact extends Component {
             message: this.state.message
         };
 
-        function sendEmail() {
             fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
                 method: 'POST',
                 headers: {
@@ -64,12 +63,12 @@ class Contact extends Component {
                 }
             }).then(data => {
                 console.log(data)
+                this.setState({
+                    emailSend: true,
+                })
             }).catch(err => {
                 console.log(err)
             })
-        }
-
-        sendEmail();
 
         if (isValid) {
             this.setState({
