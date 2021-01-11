@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/give_away/static/css/main.27a5e41e.chunk.css",
+    "main.js": "/give_away/static/js/main.83ae9eb2.chunk.js",
+    "main.js.map": "/give_away/static/js/main.83ae9eb2.chunk.js.map",
+    "runtime-main.js": "/give_away/static/js/runtime-main.9337108e.js",
+    "runtime-main.js.map": "/give_away/static/js/runtime-main.9337108e.js.map",
+    "static/js/2.e095ec30.chunk.js": "/give_away/static/js/2.e095ec30.chunk.js",
+    "static/js/2.e095ec30.chunk.js.map": "/give_away/static/js/2.e095ec30.chunk.js.map",
+    "index.html": "/give_away/index.html",
+    "precache-manifest.b2ab11d127692754d369dcf70d892893.js": "/give_away/precache-manifest.b2ab11d127692754d369dcf70d892893.js",
+    "service-worker.js": "/give_away/service-worker.js",
+    "static/css/main.27a5e41e.chunk.css.map": "/give_away/static/css/main.27a5e41e.chunk.css.map",
+    "static/js/2.e095ec30.chunk.js.LICENSE": "/give_away/static/js/2.e095ec30.chunk.js.LICENSE",
+    "static/media/main.scss": "/give_away/static/media/Signature.d87cadf2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9337108e.js",
+    "static/js/2.e095ec30.chunk.js",
+    "static/css/main.27a5e41e.chunk.css",
+    "static/js/main.83ae9eb2.chunk.js"
+  ]
+}
